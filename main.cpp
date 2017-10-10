@@ -11,8 +11,6 @@ int main()
         Bitmap  bmpimage;
         vector <vector <Pixel> > bmp;
 
-        bmp.resize(2);
-
         //ask for bmp formated image from user
         do{
                 cout<<"Please upload valid 24 bit depth bmp image: "<<endl;
@@ -27,13 +25,18 @@ int main()
         for(Pixel row=0;row<bmpimage.size();row++)
         {
 
-        }
+
+                for(Pixel column=0;column<bmpimage.size();column++)
+                {
+
+                }
+       
+       }
         //find average of component red, green and blue
         //assign rgb average value
         //repeat until all pixels are converted in picture
 
         //save new picture as oldtimey.bmp
-
         image.fromPixelMatrix(bmp);
         image.save("oldtimey.bmp");
 
