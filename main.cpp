@@ -8,26 +8,23 @@
 int main()
 {
         Pixel rgb;
-        Bitmap image;
+        Bitmap  bmpimage;
         vector <vector <Pixel> > bmp;
 
+        bmp.resize(2);
 
         //ask for bmp formated image from user
-
-
         do{
-        cout<<"Please upload valid bmp image: "<<endl;
-        cin>>image<<endl;
+                cout<<"Please upload valid 24 bit depth bmp image: "<<endl;
+                cin>>bmpimage<<endl;
         }
-        while(image!=bmp) //check to see if thats right
-        
-
-        image.open(image);
-        bmp = image.toPixelMatrix();
-
+        while(bmpimage!=*.bmp) //check to see if thats right
+                image.open(bmpimage);
+        bmp = bmpimage.toPixelMatrix();//would I put "bmpimage" or "image" here?
 
         //convert pixel to grey scale equivalents
-        for( ; ; )
+
+        for(Pixel row=0;row<bmpimage.size();row++)
         {
 
         }
@@ -38,7 +35,7 @@ int main()
         //save new picture as oldtimey.bmp
 
         image.fromPixelMatrix(bmp);
-        image.save("machupicchu.bmp");
+        image.save("oldtimey.bmp");
 
 
         return 0;
