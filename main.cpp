@@ -4,6 +4,7 @@
 #include<vector>
 #include"bitmap.h"
 
+using namespace std;
 
 int main()
 {
@@ -11,12 +12,14 @@ int main()
         Bitmap  bmpimage;
         vector <vector <Pixel> > bmp;
 
+        bmp.resize(1);
+
         //ask for bmp formated image from user
         do{
                 cout<<"Please upload valid 24 bit depth bmp image: "<<endl;
                 cin>>bmpimage<<endl;
         }
-        while(bmpimage!=*.bmp) //check to see if thats right
+        while(bmpimage!= *.bmp) //check to see if thats right
                 image.open(bmpimage);
         bmp = bmpimage.toPixelMatrix();//would I put "bmpimage" or "image" here?
 
