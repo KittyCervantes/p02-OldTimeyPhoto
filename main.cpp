@@ -39,7 +39,6 @@ int main()
                         color = (rgb.red+rgb.green+rgb.blue)/3;
                         bmp[row][column]=rgb;    
                 }
-            cout<<endl;
                 //repeat until all pixels are converted in picture
         }
 
