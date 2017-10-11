@@ -41,10 +41,14 @@ int main()
                 }
                 //repeat until all pixels are converted in picture
         }
+cout<<"Creating New File"<<endl;
 
         //save new picture as oldtimey.bmp
+
         bmpimage.fromPixelMatrix(bmp);
         bmpimage.save("oldtimey.bmp");
+
+cout<<"New File Created!"<<endl;
 
 
         return 0;
