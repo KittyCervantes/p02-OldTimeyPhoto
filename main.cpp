@@ -13,9 +13,10 @@ int main()
         int color;
         string usrimage;
         Bitmap  bmpimage;
-        vector <vector <Pixel> > bmp;
+        vector<vector <Pixel> >bmp;
 
         bmp.resize(1);
+        color=0;
 
         //ask for bmp formated image from user
         do{
@@ -36,12 +37,15 @@ int main()
                 {//find average of components red, green, and blue
                         //assign rgb average value
                         rgb=bmp[row][column]; 
-                        color = (rgb.red+rgb.green+rgb.blue)/3;
+                        color=(rgb.red+rgb.green+rgb.blue)/3;
+                        rgb.red=color;
+                        rgb.green=color;
+                        rgb.blue=color;
                         bmp[row][column]=rgb;    
                 }
-                //repeat until all pixels are converted in picture
+               //repeat until all pixels are converted in picture
+               //no endline or theres gonna be a lot of space here!
         }
-cout<<"Creating New File"<<endl;
 
         //save new picture as oldtimey.bmp
 
