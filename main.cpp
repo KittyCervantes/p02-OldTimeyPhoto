@@ -29,11 +29,12 @@ int main()
         bmp = bmpimage.toPixelMatrix(); //converts to bitmap
 
         //convert pixel to grey scale equivalents
-
-        for(int row=0;row<usrimage.size();row++)
+        cout<<"converting..."<<endl;
+        
+        for(int row=0; row<usrimage.size(); row++)
         {
 
-                for(int column=0;column<usrimage.size();column++)
+                for(int column=0; column<usrimage[row].size(); column++)
                 {//find average of components red, green, and blue
                         //assign rgb average value
                         rgb=bmp[row][column]; 
@@ -43,16 +44,15 @@ int main()
                         rgb.blue=color;
                         bmp[row][column]=rgb;    
                 }
-               //repeat until all pixels are converted in picture
-               //no endline or theres gonna be a lot of space here!
+                //repeat until all pixels are converted in picture
+                cout<<endl;
         }
-
         //save new picture as oldtimey.bmp
 
         bmpimage.fromPixelMatrix(bmp);
-        bmpimage.save("oldtimey.bmp");
+        bmpimage.save("oldTimey.bmp");
 
-cout<<"New File Created!"<<endl;
+        cout<<"New File Created!"<<endl;
 
 
         return 0;
